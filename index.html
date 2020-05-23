@@ -19,6 +19,8 @@
 
       </div>
       <div class="top-bar">
+        <span class="navbar-logo">kinder</span>
+      </div>
         <div id="menuToggle">
           <input type="checkbox" />
             <span></span>
@@ -31,8 +33,6 @@
             <a href="#"><li>your local community</li></a>
           </ul>
         </div>
-        <span class="navbar-logo">kinder</span>
-      </div>
 <div class="preview-block">
   <div class="block__cost">860 ISK</div>
 	<div class="image-block">
@@ -54,9 +54,9 @@
 			<h3 class="block__name">John Smith</h3>
 			<span class="block__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium dignissimos ex animi at dolor, a tenetur accusamus nesciunt modi commodi laborum exercitationem asperiores temporibus? Quod quis illum enim corrupti sequi, nulla accusamus quidem tempora nihil dolores consequuntur tenetur reprehenderit explicabo labore sapiente doloribus sint harum adipisci ratione nemo incidunt vero quos! Nemo error esse, dolor molestiae autem quas magni dicta incidunt similique rerum tempore repellendus libero quis unde, laudantium, ipsam suscipit. Quaerat, suscipit laudantium. Quae, est excepturi nobis quaerat possimus neque quas ex architecto. Dolores, odio voluptatibus dolore quas odit nobis explicabo eos, veniam molestiae numquam laudantium nesciunt repellendus!
 			</span>
-		</div>
 		<div class="block__tags">
 			<div class="block__tags-item">verified</div>
+		</div>
 		</div>
 		<div class="page-actions">
 			<button class="page-actions__button page-actions__button--prev">
@@ -82,8 +82,13 @@
 		</div>
 	</div>
 </div>
+<div class="bottom-bar">
+  <!--span>sort</span>
+  <span>goo</span-->
+</div>
     </div>
     <div class="secret-background"></div>
+    <div class="secret-background2"></div>
 
   </div>
   <script>
@@ -93,17 +98,17 @@
     });
 var cards = [
 	{
-		title: 'toilet paper',
-		author: 'requested by Maria in Reykjavik',
-		content: "Hello! My name is Maria. I am a single mother of 3 children.",
+		title: 'Libero comfort duo 40x',
+		author: 'requested by <b>Maria</b> in Reykjavik',
+		content: "Hello! My name is Maria. I am the single caretaker of my 3 children as my husband passed away two months ago just as I was made redundant at work. <img src='https://st2.depositphotos.com/2071887/10731/v/600/depositphotos_107313040-stock-video-young-family-taking-selfies-with.jpg'></img>I would greatly appreciate support as we're nearing at the end of the month and I am struggling to buy supplies for my kids.",
 		tags: ['verified'],
-		image: "https://i5.walmartimages.com/asr/5d5f5118-a800-4b8b-83db-e17162600f20.abf30bc3851362ebef6a9cfde79626eb.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff",
-    cost: "860 ISK"
+		image: "https://verslun.hagkaup.is/wp-content/uploads/2020/03/1144006-600x600.jpg",
+    cost: "1849 ISK"
 	},{
 		title: 'Fire 7 Tablet',
-		author: 'requested by Celine in Kenya',
+		author: 'requested by <b>Celina and Mali</b> in Kenya',
     cost: "5400 ISK",
-		content: "need tablet to study",
+		content: "Hello! We are sisters Celina and Mali and we live in the suburbs of Nairobi. <img src='https://us.123rf.com/450wm/bst2012/bst20121412/bst2012141213932/35737620-african-american-sisters-studying.jpg?ver=6'></img> We have recently enrolled in a homeschooling program but cannot participate since we don't have a computer at home.",
 		tags: ['technology'],
 		image: "https://brain-images-ssl.cdn.dixons.com/1/8/10194581/l_10194581_001.jpg"
 	}
@@ -166,6 +171,11 @@ var previewPage = (function($, data){
 			setTimeout(function(){
 				$('.image-block__image').css({filter: 'blur(0px)'});
 			},300);
+      $(".preview-block").animate({left:'-120px'}, {queue: true, duration: 300}, function() {
+      }).animate({left: "400px"}, {queue: true, duration: 1}).animate({left:'50%'}, {queue: true, duration: 300});
+
+      //$(".preview-block").animate({left:'120px'}, {queue: false, duration: 500});
+
 			var content = $('.block__content').html(currentData.content);
 			var title = $('.block__title').html(currentData.title);
 			var name = $('.block__name').html(currentData.author);
