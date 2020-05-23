@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+
+#phone {
+  position: absolute;
+  z-index: 50; }
+
+.app {
+  background-color: #f8f8f4;
+  width: 250px;
+  height: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: -272px; }
+
+.top-bar {
+  height: 40px;
+  border-bottom: 1px solid #f0f0e6;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.phone-toolbar {
+  background-color: #333;
+  height: 27px; }
+
+/*# sourceMappingURL=style.css.map */
