@@ -31,11 +31,57 @@
             <a href="#"><li>your local community</li></a>
           </ul>
         </div>
-      </nav>
         <span class="navbar-logo">kinder</span>
       </div>
-      <nav role="navigation">
-
+<div class="preview-block">
+  <div class="block__cost">860 ISK</div>
+	<div class="image-block">
+		<div class="image-block__wrapper">
+			<img class="image-block__image" src="https://images.unsplash.com/photo-1549436304-3bfb7b6aab87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="">
+		</div>
+	</div>
+	<div class="preview-block__content">
+		<div class="block">
+			<button class="btn">
+				<span>More</span>
+				<span>
+					<svg viewBox="0 0 24 24">
+						<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+					</svg>
+				</span>
+			</button>
+			<h2 class="block__title">Lorem Ipsum</h2>
+			<h3 class="block__name">John Smith</h3>
+			<span class="block__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium dignissimos ex animi at dolor, a tenetur accusamus nesciunt modi commodi laborum exercitationem asperiores temporibus? Quod quis illum enim corrupti sequi, nulla accusamus quidem tempora nihil dolores consequuntur tenetur reprehenderit explicabo labore sapiente doloribus sint harum adipisci ratione nemo incidunt vero quos! Nemo error esse, dolor molestiae autem quas magni dicta incidunt similique rerum tempore repellendus libero quis unde, laudantium, ipsam suscipit. Quaerat, suscipit laudantium. Quae, est excepturi nobis quaerat possimus neque quas ex architecto. Dolores, odio voluptatibus dolore quas odit nobis explicabo eos, veniam molestiae numquam laudantium nesciunt repellendus!
+			</span>
+		</div>
+		<div class="block__tags">
+			<div class="block__tags-item">verified</div>
+		</div>
+		<div class="page-actions">
+			<button class="page-actions__button page-actions__button--prev">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+				</svg>
+			</button>
+			<button class="page-actions__button page-actions__button--chat">
+				<svg width="18" height="18" viewBox="0 0 24 24">
+				  <path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z"></path>
+				</svg>
+			</button>
+			<button class="page-actions__button page-actions__button--like">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+				  <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
+				</svg>
+			</button>
+			<button class="page-actions__button page-actions__button--next">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
     </div>
     <div class="secret-background"></div>
 
@@ -45,7 +91,141 @@
     $(document).ready(function() {
       //$("#formSubmitSuccess").css("opacity", "0");
     });
+var cards = [
+	{
+		title: 'toilet paper',
+		author: 'requested by Maria in Reykjavik',
+		content: "Hello! My name is Maria. I am a single mother of 3 children.",
+		tags: ['verified'],
+		image: "https://i5.walmartimages.com/asr/5d5f5118-a800-4b8b-83db-e17162600f20.abf30bc3851362ebef6a9cfde79626eb.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff",
+    cost: "860 ISK"
+	},{
+		title: 'Fire 7 Tablet',
+		author: 'requested by Celine in Kenya',
+    cost: "5400 ISK",
+		content: "need tablet to study",
+		tags: ['technology'],
+		image: "https://brain-images-ssl.cdn.dixons.com/1/8/10194581/l_10194581_001.jpg"
+	}
+];
+var previewPage = (function($, data){
+	var profile = {
+		currentContentOnButton: '',
+		contentOnButtonIfBlockOpen: '<span>Hide</span><span><svg viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg></span>',
+		currentActivePageIndex: 0,
+		pageAmount: data.length,
+		lastPageIndex: data.length - 1,
+		setControllers: function () {
+			var self = this;
+			$('.btn').on('click', function () {
+				var block = $('.block');
+				if( !block.hasClass('block--open') ){
+					self.currentContentOnButton = $(this).html();
+					$(this).html(self.contentOnButtonIfBlockOpen);
+				}else{
+					$(this).html(self.currentContentOnButton);
+				}
+				$('.block').toggleClass('block--open');
+			});
+			$('.page-actions__button--like').on('click', function () {
+				$(this).addClass('page-actions__button--like-remove');
+				var _self = $(this);
+				setTimeout(function () {
+					_self.remove();
+				}, 300);
+		 	});
+			$(document).on('click', '.page-actions__button--prev', function () {
+				self.getActiveIndex('prev');
+				self.setDataOnPreviewPage(self.currentActivePageIndex)
+			});
+			$(document).on('click', '.page-actions__button--next', function () {
+				self.getActiveIndex('next');
+				self.setDataOnPreviewPage(self.currentActivePageIndex)
+			});
+		},
+		getActiveIndex: function (direction) {
+			if (direction === 'prev') {
+				if (this.currentActivePageIndex === 0) {
+					this.currentActivePageIndex = this.lastPageIndex;
+				}else{
+					this.currentActivePageIndex--;
+				}
+			}
+			if (direction === 'next') {
+				 if (this.currentActivePageIndex === this.lastPageIndex){
+					this.currentActivePageIndex = 0;
+				}else{
+					this.currentActivePageIndex++;
+				}
+			}
+		},
+		setDataOnPreviewPage: function (index) {
+			var currentData = data[index];
+			var image = $('.image-block__image').attr('src', currentData.image);
+			$('.image-block__image').css({filter: 'blur(15px)'});
+			setTimeout(function(){
+				$('.image-block__image').css({filter: 'blur(0px)'});
+			},300);
+			var content = $('.block__content').html(currentData.content);
+			var title = $('.block__title').html(currentData.title);
+			var name = $('.block__name').html(currentData.author);
+			var cost = $('.block__cost').html(currentData.cost);
 
+			var tagsContainer = $('.block__tags');
+			tagsContainer.empty();
+			currentData.tags.forEach(function (tag) {
+				tagsContainer.append('<div class="block__tags-item">'+ tag +'</div>');
+			});
+
+		},
+		init: function () {
+			this.setDataOnPreviewPage(this.currentActivePageIndex)
+			this.setControllers();
+		}
+	};
+	return profile;
+}($, cards));
+
+ previewPage.init();
+/*
+var currentContent;
+$('.btn').on('click', function () {
+	var block = $('.block');
+	var newContent = 'hide';
+	if( !block.hasClass('block--open') ){
+		currentContent = $(this).text();
+		$(this).text(newContent);
+	}
+	if( block.hasClass('block--open') ){
+		$(this).text(currentContent);
+	}
+	$('.block').toggleClass('block--open');
+});
+$('.page-actions__button--like').on('click', function () {
+	$(this).addClass('page-actions__button--like-remove');
+	var self = $(this);
+	setTimeout(function () {
+		self.remove();
+	}, 300);
+});
+*/
+
+/*
+function showAndHideInfo () {
+	var isOpen = false;
+	var max = $('span').height();
+	var min = $('.block').height();
+	$('.btn').on('click', function () {
+		if ( !isOpen ) {
+			$('.block').animate({height: max+"px"}, 300);
+		}else{
+			$('.block').animate({height: min+"px"}, 300);
+		}
+		isOpen = !isOpen;
+	});
+}
+showAndHideInfo();
+*/
   </script> <!-- fix to make sure transitions do not load too early in Chrome -->
 </body>
 </html>
