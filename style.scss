@@ -15,6 +15,7 @@ body {
 #phone {
   position: absolute;
   z-index: 50;
+  pointer-events: none;
 }
 
 .app {
@@ -49,15 +50,15 @@ nav {
   background-color: white;
   z-index: 150;
   width: 300px;
-  height: 555px;
-  margin-left: -551px;
+  height: 565px;
+  margin-left: -570px;
 }
 
 #menuToggle {
   display: block;
   position: absolute;
-  top: 36px;
-  left: 10px;
+  top: 40px;
+  left: 14px;
 
   z-index: 1;
 
@@ -101,7 +102,7 @@ nav {
   margin-bottom: 5px;
   position: relative;
 
-  background: #333;
+  background: #696960;
   border-radius: 3px;
 
   z-index: 1;
@@ -110,7 +111,8 @@ nav {
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+              opacity 0.55s ease,
+              width 0.5s ease;
 }
 
 #menuToggle span:first-child
@@ -127,7 +129,8 @@ nav {
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #696960;
+  width: 29px;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3)
@@ -147,7 +150,7 @@ nav {
   width: 250px;
   height: 485px;
   box-sizing: border-box;
-  margin: 5px 0 0 -50px;
+  margin: 3px 0 0 -50px;
   padding: 125px 20px 20px 60px;
   padding-top: 125px;
 
