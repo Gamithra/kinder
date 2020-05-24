@@ -1,3 +1,12 @@
+* {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+ scrollbar-width: none;
+}
+
+*::-webkit-scrollbar { width: 0 !important; display: none}
+.view::-webkit-scrollbar { width: 0 !important; display: none}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +28,7 @@ body {
 }
 
 .app {
-  background-color: #f8f8f4;
+  background-color: #white;
   width: 250px;
   height: 550px;
   position: absolute;
@@ -45,6 +54,10 @@ body {
   padding-top: 8px;
   font-family: "Josefin Sans";
   color: #333300;
+
+  img {
+    height: 14px;
+  }
 }
 
 .phone-toolbar {
@@ -65,6 +78,7 @@ nav {
   z-index: 100;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .map-view {
   overflow: hidden;
@@ -119,9 +133,10 @@ nav {
 
   .view-mission {
     width: 100%;
-    height: 100%;
-    background-color: #f3f3e9;
-    border-top: 1px solid #e0e0d2;
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    background-color: #white;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -137,7 +152,7 @@ nav {
 }
 
 .links {
-  padding: 18px 12px;
+  padding: 11px 12px;
 }
 
 .menu-rank {
@@ -230,7 +245,7 @@ nav {
 }
 
 .milestone {
-  background-color: #529;
+  background-color: #6936eb;
   width: 100%;
   min-height: 80px;
   padding: 8px 8px 5px;
@@ -278,12 +293,198 @@ nav {
   padding: 12px;
   background-color: #222;
   color: white;
+  height: 130px;
 
   a {
     li {
       color: white;
       padding: 6px 0;
     }
+  }
+}
+
+.profile-view {
+  margin: 0;
+  padding: 0;
+
+  .profile-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #d4d4b4;
+  }
+
+  .profile-name {
+    display: flex;
+    padding: 16px;
+    background-color: #333;
+    min-height: 150px;
+    height: auto;
+    margin-top: -6px;
+    color: white;
+
+    .menu-name {
+      color: white;
+      margin: 0;
+    }
+
+    .menu-coins {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      p {
+        margin: 2px;
+        font-size: 13px;
+      }
+    }
+
+    .menu-level {
+      margin-top: 6px;
+    }
+    .menu-rank {
+      margin-top: 6px;
+    }
+
+
+  }
+
+
+  .profile-contributions {
+    padding: 16px;
+    background-color: #222;
+    color: white;
+
+    h2 {
+      font-size: 18px;
+      margin: 6px 0;
+    }
+
+    p {
+      color: #9ca7fe;
+      margin: 6px 0;
+    }
+
+    h3 {
+      margin: 3px 0;
+    }
+
+    .contr-helped {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        width: 25%;
+        margin-right: 10px;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+.leader-view {
+  background-color: #333;
+
+  .leader-title {
+    color: white;
+    height: 30px;
+    font-size: 20px;
+    padding: 16px;
+
+    .leader-location {
+      img {
+        width: 10px;
+      }
+      font-size: 12px;
+    }
+  }
+
+  .leader-content {
+    background-color: #222;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    color: white;
+  }
+
+  .leader-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    border-bottom: 1px solid #444;
+    width: 100%;
+
+    p {
+      margin: 3px;
+      font-size: 14px;
+    }
+
+    .leader-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        margin-right: 5px;
+      }
+    }
+
+    .menu-coins {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+  }
+}
+
+.mission-view {
+  .mission-type {
+    height: 100%;
+    padding: 20px;
+
+    h2 {
+      color: white;
+      font-size: 18px;
+    }
+  }
+
+  a {
+    height: 33.34%;
+    text-decoration: none;
+  }
+
+  .mission-type1 {
+    background-color: #a8e0ce;
+  }
+  .mission-type2 {
+    background-color: #9ca7fe;
+  }
+  .mission-type3 {
+    background-color: #6936eb;
   }
 }
 
@@ -325,7 +526,7 @@ nav {
 }
 
 #menuToggle a:hover {
-  color: tomato;
+  color: #9ca7fe;
 }
 
 
@@ -405,7 +606,7 @@ nav {
 
   z-index: 20;
 
-  background: #ededed;
+  background: white;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 
@@ -611,7 +812,7 @@ body {
 }
 
 .block__cost {
-  background-color: #552255;
+  background-color: #6936eb;
   color: white;
   padding: 6px 10px;
   position: absolute;
@@ -681,7 +882,7 @@ body {
 }
 .page-actions__button--prev:active {
   box-shadow: 1px 5px 10px #aaa;
-}
+};;
 .page-actions__button--prev svg {
   fill: #888;
 }
@@ -691,6 +892,15 @@ body {
   animation-delay: 0.1s;
   transition: 0.3s ease;
 }
+
+#chat-button {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
+  box-shadow: none;
+
+}
+
 .page-actions__button--chat:hover {
   box-shadow: 1px 5px 30px rgba(27, 153, 139, 0.6);
 }
@@ -698,10 +908,15 @@ body {
   box-shadow: 1px 5px 10px rgba(27, 153, 139, 0.6);
 }
 .page-actions__button--like {
-  background-color: #E71D36;
-  box-shadow: 1px 5px 20px rgba(231, 29, 54, 0.6);
+  background-color: #6936eb;
+  box-shadow: none;
   animation-delay: 0.2s;
   transition: 0.3s ease;
+  border-radius: 18px;
+  font-size: 18px;
+  color: white;
+  font-family: "Poppins";
+  width: 100px;
 }
 .page-actions__button--like:hover {
   box-shadow: 1px 5px 30px rgba(231, 29, 54, 0.6);

@@ -19,7 +19,10 @@
 
       </div>
       <div class="top-bar">
-        <span class="navbar-logo">kinder</span>
+        <span class="navbar-logo">
+          <img src="img/kinder-logo.png"></img>
+          <img src="img/kinder.png"></img>
+         </span>
       </div>
         <div id="menuToggle">
           <input type="checkbox" />
@@ -52,7 +55,7 @@
             </div>
             <div class="links">
               <a href="#" id="map"><li>Map</li></a>
-              <a href="#" id="projects"><li>Active missions</li></a>
+              <a href="#" id="missions"><li>Missions</li></a>
               <a href="#" id="offers"><li>My offers & requests</li></a>
             </div>
             <div class="milestone">
@@ -70,6 +73,25 @@
             <div>
           </ul>
         </div>
+
+<div class="view mission-view" style="display:none">
+  <a href="#" id="volunteer">
+    <div class="mission-type mission-type1">
+      <h2>Volunteering tasks</h2>
+      <p></p>
+    </div>
+  </a>
+  <a href="#" id="items">
+    <div class="mission-type mission-type2">
+      <h2>Donate items</h2>
+    </div>
+  </a>
+  <a href="#" id="projects">
+    <div class="mission-type mission-type3">
+      <h2>Support projects</h2>
+    </div>
+  </a>
+</div>
 <div class="preview-block" style="display:none">
   <div class="block__cost">860 ISK</div>
 	<div class="image-block">
@@ -87,11 +109,16 @@
 					</svg>
 				</span>
 			</button>
+			<button class="page-actions__button page-actions__button--chat" id="chat-button">
+				<svg width="18" height="18" viewBox="0 0 24 24">
+				  <path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z"></path>
+				</svg>
+			</button>
 			<h2 class="block__title">Lorem Ipsum</h2>
 			<h3 class="block__name">John Smith</h3>
 			<span class="block__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium dignissimos ex animi at dolor, a tenetur accusamus nesciunt modi commodi laborum exercitationem asperiores temporibus? Quod quis illum enim corrupti sequi, nulla accusamus quidem tempora nihil dolores consequuntur tenetur reprehenderit explicabo labore sapiente doloribus sint harum adipisci ratione nemo incidunt vero quos! Nemo error esse, dolor molestiae autem quas magni dicta incidunt similique rerum tempore repellendus libero quis unde, laudantium, ipsam suscipit. Quaerat, suscipit laudantium. Quae, est excepturi nobis quaerat possimus neque quas ex architecto. Dolores, odio voluptatibus dolore quas odit nobis explicabo eos, veniam molestiae numquam laudantium nesciunt repellendus!
 			</span>
-		<div class="block__tags">
+		<div class="block__tags" style="display:none">
 			<div class="block__tags-item">verified</div>
 		</div>
 		</div>
@@ -101,16 +128,12 @@
 					<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
 				</svg>
 			</button>
-			<button class="page-actions__button page-actions__button--chat">
-				<svg width="18" height="18" viewBox="0 0 24 24">
-				  <path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z"></path>
-				</svg>
-			</button>
 			<button class="page-actions__button page-actions__button--like">
-				<svg width="24" height="24" viewBox="0 0 24 24">
+        support
+				<!--svg width="24" height="24" viewBox="0 0 24 24">
 				  <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
-				</svg>
-			</button>
+				</svg-->
+  		</button>
 			<button class="page-actions__button page-actions__button--next">
 				<svg width="24" height="24" viewBox="0 0 24 24">
 					<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
@@ -119,17 +142,168 @@
 		</div>
 	</div>
 </div>
-<div class="view map-view">
+<div class="view map-view" style="display:flex">
   <img src="img/isf.png" class="map"></img>
   <img src="img/point.png" class="map-point" id="point-1"></img>
   <img src="img/point.png" class="map-point" id="point-2"></img>
   <img src="img/point.png" class="map-point" id="point-3"></img>
   <div class="you"></div>
   <div class="you you-bg"></div>
-  <div class="view-mission">
+  <div class="view-mission" id="default">
     Select a mission near you!
 
     <span>There are currently 3 missions in your area. How could you help out today?</span>
+  </div>
+  <div class="view-mission" id="mission-1" style="display: none">
+    Deliver groceries to elderly lady
+  </div>
+</div>
+<div class="view leader-view" style="display:none">
+  <div class="leader-title">
+    Leaderboard
+    <div class="leader-location">
+      <img src="img/point.png"></img>
+      Ísafjörður
+    </div>
+  </div>
+  <div class="leader-content">
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/thor.png"></img>
+      <p>
+                  Þór J.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>3040</p>
+      </div>
+    </div>
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p4.png"></img>
+      <p>
+        Þóranna J.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>2780</p>
+      </div>
+    </div>
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p2.png"></img>
+      <p>
+        Einar O.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>2340</p>
+      </div>
+    </div>
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p5.png"></img>
+      <p>
+        Tryggvi H.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>1980</p>
+      </div>
+    </div>
+
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p3.png"></img>
+      <p>
+        Helga K.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>1950</p>
+      </div>
+    </div>
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p1.png"></img>
+      <p>
+        Jóhann M.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>1780</p>
+      </div>
+    </div>
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p6.png"></img>
+      <p>
+            María A.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>1440</p>
+      </div>
+    </div>
+    <div class="leader-row">
+      <div class="leader-left">
+      <img src="img/p7.png"></img>
+      <p>
+        Hannes H.
+      </p>
+      </div>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>1200</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="view profile-view" style="display:none">
+  <div class="profile-image">
+    <img src="img/thorprofile.png"></img>
+  </div>
+  <div class="profile-name">
+    <div class="menu-info">
+      <p class="menu-name">Þór Jónsson</p>
+      <div class="menu-coins">
+        <img src="img/coins.png"></img>
+        <p>3040 kindness coins</p>
+      </div>
+      <div class="menu-level">
+        Rank: Expert Volunteer
+        <div class="menu-rank">
+          <div id="rank-do"></div>
+          <div id="rank-done"></div>
+          <p>Gather 130 more kindness coins to reach the next rank!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-contributions">
+    <h2>Your contributions</h2>
+    <div class="contr-helped">
+      <p>People you've helped</p>
+      <div class="contr-people">
+        <img src="img/p1.png"></img>
+        <img src="img/p2.png"></img>
+        <img src="img/p3.png"></img>
+        <img src="img/p4.png"></img>
+        <img src="img/p5.png"></img>
+      </div>
+    </div>
+    <div class="contr-helped">
+      <p> Money you've contributed</p>
+      <h3>34800 ISK</h3>
+    </div>
+
   </div>
 </div>
 <div class="bottom-bar">
@@ -148,29 +322,62 @@
       $("#map").on('click', function() {
         $(".map-view").css({display: "flex"});
         $(".preview-block").css({display: "none"});
+        $(".profile-view").css({display: "none"});
+        $(".leader-view").css({display: "none"});
+        $(".mission-view").css({display: "none"});
       });
       $("#projects").on('click', function() {
         $(".preview-block").css({display: "block"});
         $(".map-view").css({display: "none"});
+        $(".profile-view").css({display: "none"});
+        $(".leader-view").css({display: "none"});
+        $(".mission-view").css({display: "none"});
+      });
+      $("#profile").on('click', function() {
+        $(".preview-block").css({display: "none"});
+        $(".map-view").css({display: "none"});
+        $(".profile-view").css({display: "flex"});
+        $(".leader-view").css({display: "none"});
+        $(".mission-view").css({display: "none"});
+      });
+      $("#leaderboard").on('click', function() {
+        $(".preview-block").css({display: "none"});
+        $(".map-view").css({display: "none"});
+        $(".profile-view").css({display: "none"});
+        $(".leader-view").css({display: "flex"});
+        $(".mission-view").css({display: "none"});
+      });
+      $("#missions").on('click', function() {
+        $(".preview-block").css({display: "none"});
+        $(".map-view").css({display: "none"});
+        $(".profile-view").css({display: "none"});
+        $(".leader-view").css({display: "none"});
+        $(".mission-view").css({display: "flex"});
+      });
+
+
+      $("#point-1").on('click', function() {
+        $("#mission-1").css({display: "flex"});
+        $("#default").css({display: "none"});
+
+        $( ".mission-1" ).animate({
+          opacity: 1.0,
+          height: "400px",
+        }, 500, function() {
+          // Animation complete.
+        });
+
       });
     });
 var cards = [
 	{
-		title: 'Libero comfort duo 40x',
-		author: 'requested by <b>Maria</b> in Reykjavik',
-		content: "Hello! My name is Maria. I am the single caretaker of my 3 children as my husband passed away two months ago just as I was made redundant at work. <img src='https://st2.depositphotos.com/2071887/10731/v/600/depositphotos_107313040-stock-video-young-family-taking-selfies-with.jpg'></img>I would greatly appreciate support as we're nearing at the end of the month and I am struggling to buy supplies for my kids.",
+		title: '3D printer',
+		author: 'requested by Fab Lab Ísafjörður',
+		content: "Hi! The Fab Lab in Ísafjörður looking for supporters to start manufactoring ventilators for COVID-19 patients. <img src='https://www.fablabs.io/media/W1siZiIsIjIwMTkvMTIvMDIvMTIvNDkvMDMvY2QzNTM0YWItMDliNy00NzU0LTliNWQtZTg2NzU1YzM2N2M4L0hvcG15bmRfTWFrZXJ5MjAxOS5qcGciXSxbInAiLCJ0aHVtYiIsIjgwMHgiXV0/Hopmynd_Makery2019.jpg?sha=9ec83f3c4c5bbd65'></img> We would be very grateful for any help!",
 		tags: ['verified'],
-		image: "https://verslun.hagkaup.is/wp-content/uploads/2020/03/1144006-600x600.jpg",
-    cost: "1849 ISK"
-	},{
-		title: 'Fire 7 Tablet',
-		author: 'requested by <b>Celina and Mali</b> in Kenya',
-    cost: "5400 ISK",
-		content: "Hello! We are sisters Celina and Mali and we live in the suburbs of Nairobi. <img src='https://us.123rf.com/450wm/bst2012/bst20121412/bst2012141213932/35737620-african-american-sisters-studying.jpg?ver=6'></img> We have recently enrolled in a homeschooling program but cannot participate since we don't have a computer at home.",
-		tags: ['technology'],
-		image: "https://brain-images-ssl.cdn.dixons.com/1/8/10194581/l_10194581_001.jpg"
-	}
-];
+		image: "https://cdn.shop.prusa3d.com/1311-large_default/original-prusa-i3-mk3-3d-printer.jpg",
+    cost: "38490 ISK"
+	}];
 var previewPage = (function($, data){
 	var profile = {
 		currentContentOnButton: '',
