@@ -28,12 +28,11 @@
           <span></span>
 
           <ul id="menu">
-            <a href="#"><li>your profile</li></a>
-            <a href="#"><li>support</li></a>
-            <a href="#"><li>your local community</li></a>
+            <a href="#" id="map"><li>map</li></a>
+            <a href="#" id="projects"><li>projects near you</li></a>
           </ul>
         </div>
-<div class="preview-block">
+<div class="preview-block" style="display:none">
   <div class="block__cost">860 ISK</div>
 	<div class="image-block">
 		<div class="image-block__wrapper">
@@ -82,6 +81,19 @@
 		</div>
 	</div>
 </div>
+<div class="view map-view">
+  <img src="img/isf.png" class="map"></img>
+  <img src="img/point.png" class="map-point" id="point-1"></img>
+  <img src="img/point.png" class="map-point" id="point-2"></img>
+  <img src="img/point.png" class="map-point" id="point-3"></img>
+  <div class="you"></div>
+  <div class="you you-bg"></div>
+  <div class="view-mission">
+    Select a mission near you!
+
+    <span>There are currently 3 missions in your area. How could you help out today?</span>
+  </div>
+</div>
 <div class="bottom-bar">
   <!--span>sort</span>
   <span>goo</span-->
@@ -95,6 +107,14 @@
 
     $(document).ready(function() {
       //$("#formSubmitSuccess").css("opacity", "0");
+      $("#map").on('click', function() {
+        $(".map-view").css({display: "flex"});
+        $(".preview-block").css({display: "none"});
+      });
+      $("#projects").on('click', function() {
+        $(".preview-block").css({display: "block"});
+        $(".map-view").css({display: "none"});
+      });
     });
 var cards = [
 	{
