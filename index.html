@@ -25,7 +25,7 @@
          </span>
       </div>
         <div id="menuToggle">
-          <input type="checkbox" />
+          <input type="checkbox" id="close" />
             <span></span>
           <span></span>
           <span></span>
@@ -155,7 +155,27 @@
     <span>There are currently 3 missions in your area. How could you help out today?</span>
   </div>
   <div class="view-mission" id="mission-1" style="display: none">
-    Deliver groceries to elderly lady
+    <img src="img/elderly.jpeg"></img>
+    <h3>Deliver groceries to elderly lady</h3>
+    <p>
+      Anna needs some help getting groceries and some supplies from the pharmacy. Could you help out between 16:00-17:00 on Friday?
+    </p>
+    <div class="mission-take">
+      <div class="mission-reward">
+        Reward
+        200
+        <img src="img/coins.png"></img>
+      </div>
+      <div class="mission-buttons">
+        <div class="mission-share">Share
+          <div>
++10<img src="img/coins.png"></img></div>
+        </div>
+        <div class="mission-yes">
+            I will help!
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="view leader-view" style="display:none">
@@ -325,6 +345,7 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "none"});
+        $("#close").prop("checked", false);
       });
       $("#projects").on('click', function() {
         $(".preview-block").css({display: "block"});
@@ -332,6 +353,7 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "none"});
+        $("#close").prop("checked", false);
       });
       $("#profile").on('click', function() {
         $(".preview-block").css({display: "none"});
@@ -339,6 +361,7 @@
         $(".profile-view").css({display: "flex"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "none"});
+        $("#close").prop("checked", false);
       });
       $("#leaderboard").on('click', function() {
         $(".preview-block").css({display: "none"});
@@ -346,6 +369,7 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "flex"});
         $(".mission-view").css({display: "none"});
+        $("#close").prop("checked", false);
       });
       $("#missions").on('click', function() {
         $(".preview-block").css({display: "none"});
@@ -353,6 +377,7 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "flex"});
+        $("#close").prop("checked", false);
       });
 
 
@@ -360,9 +385,9 @@
         $("#mission-1").css({display: "flex"});
         $("#default").css({display: "none"});
 
-        $( ".mission-1" ).animate({
+        $( "#mission-1" ).animate({
           opacity: 1.0,
-          height: "400px",
+          height: "450px",
         }, 500, function() {
           // Animation complete.
         });
