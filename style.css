@@ -115,6 +115,119 @@ nav {
       font-size: 10px;
       text-align: center; }
 
+.links {
+  padding: 18px 12px; }
+
+.menu-rank {
+  position: relative; }
+  .menu-rank #rank-do {
+    width: 110px;
+    background-color: #888;
+    height: 8px;
+    border-radius: 3px; }
+  .menu-rank #rank-done {
+    position: absolute;
+    border-radius: 3px;
+    width: 80px;
+    background-color: #7F9;
+    height: 8px;
+    top: 0; }
+  .menu-rank p {
+    color: #aaa;
+    font-size: 8px;
+    margin-top: 12px; }
+
+.menu-you {
+  display: flex;
+  background-color: #333;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 20px 10px 12px;
+  flex-direction: row;
+  align-items: center; }
+  .menu-you .menu-img {
+    display: flex;
+    flex-direction: column; }
+    .menu-you .menu-img img {
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      margin-top: -8px; }
+    .menu-you .menu-img p {
+      font-size: 8px;
+      color: white;
+      margin: 0; }
+    .menu-you .menu-img .menu-coins {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: row; }
+      .menu-you .menu-img .menu-coins img {
+        width: 13px;
+        height: 13px;
+        margin-top: 1px; }
+      .menu-you .menu-img .menu-coins p {
+        color: white;
+        font-size: 11px;
+        margin: 0;
+        margin-left: 3px; }
+  .menu-you .menu-name {
+    color: #fff;
+    font-size: 18px;
+    padding-bottom: 0px;
+    margin: 0; }
+  .menu-you .menu-info {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column; }
+  .menu-you .menu-level {
+    margin: 0;
+    color: #f7f7e8;
+    font-size: 10px; }
+
+.milestone {
+  background-color: #529;
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 8px 5px; }
+  .milestone h3 {
+    color: white;
+    margin: 0;
+    font-size: 14px; }
+  .milestone p {
+    color: white;
+    margin: 2px 0 0 0;
+    font-size: 10px; }
+  .milestone .milestone-progress {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: white; }
+    .milestone .milestone-progress #rank-do {
+      width: 140px;
+      background-color: #888;
+      height: 8px;
+      border-radius: 3px;
+      margin-top: 8px;
+      margin-right: 12px; }
+    .milestone .milestone-progress #rank-done {
+      position: absolute;
+      margin-right: 12px;
+      margin-top: 8px;
+      border-radius: 3px;
+      width: 120px;
+      background-color: #5B5;
+      height: 8px;
+      top: 0; }
+
+.menu-bottom {
+  width: 100%;
+  padding: 12px;
+  background-color: #222;
+  color: white; }
+  .menu-bottom a li {
+    color: white;
+    padding: 6px 0; }
+
 .secret-background {
   position: absolute;
   background-color: white;
@@ -198,9 +311,7 @@ nav {
   width: 250px;
   height: 485px;
   box-sizing: border-box;
-  margin: 7px 0 0 -50px;
-  padding: 125px 20px 20px 60px;
-  padding-top: 125px;
+  margin: 7px 0 0 -53px;
   z-index: 20;
   background: #ededed;
   list-style-type: none;
