@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Lato");
 * {
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -196,6 +196,12 @@ nav {
     top: 265px;
     left: 175px; }
   .map-view #default {
+    background: white;
+    background: linear-gradient(180deg, white 51%, rgba(181, 160, 219, 0.4079832617) 96%);
+    background: white;
+    background: linear-gradient(180deg, white 51%, rgba(164, 138, 209, 0.4079832617) 96%);
+    background: white;
+    background: linear-gradient(180deg, white 51%, rgba(164, 138, 209, 0.4079832617) 100%);
     padding: 16px; }
   .map-view .view-mission {
     width: 100%;
@@ -397,13 +403,22 @@ nav {
 
 .milestone {
   background-color: #6936eb;
-  width: 100%;
+  width: auto;
   min-height: 80px;
-  padding: 8px 8px 5px; }
+  padding: 8px 8px 5px;
+  text-align: center;
+  border-radius: 8px;
+  margin: -5px 10px 7px;
+  box-sizing: border-box;
+  background: #020024;
+  background: #9ca7fe;
+  background: linear-gradient(180deg, #9ca7fe 75%, rgba(111, 90, 208, 0.4079832617) 100%);
+  background: #9ca7fe;
+  background: linear-gradient(300deg, #9ca7fe 61%, rgba(111, 90, 208, 0.4079832617) 100%); }
   .milestone h3 {
     color: white;
     margin: 0;
-    font-size: 14px; }
+    font-size: 12px; }
   .milestone p {
     color: white;
     margin: 2px 0 0 0;
@@ -414,7 +429,7 @@ nav {
     flex-direction: row;
     color: white; }
     .milestone .milestone-progress #rank-do {
-      width: 140px;
+      width: 130px;
       background-color: #888;
       height: 8px;
       border-radius: 3px;
@@ -425,8 +440,8 @@ nav {
       margin-right: 12px;
       margin-top: 8px;
       border-radius: 3px;
-      width: 120px;
-      background-color: #5B5;
+      width: 100px;
+      background-color: #cbffee;
       height: 8px;
       top: 0; }
 
@@ -549,10 +564,41 @@ nav {
 
 .mission-view .mission-type {
   height: 100%;
-  padding: 20px; }
+  padding: 30px;
+  position: relative;
+  transition: 0.3s ease; }
+  .mission-view .mission-type .separator {
+    width: 20px;
+    height: 2px;
+    opacity: 0.3;
+    background-color: #333;
+    margin-top: 6px; }
   .mission-view .mission-type h2 {
     color: white;
-    font-size: 18px; }
+    font-size: 18px;
+    margin-top: 18px;
+    z-index: 10;
+    width: 50%;
+    margin-left: auto;
+    opacity: 0.99;
+    transition: 0.3s ease; }
+  .mission-view .mission-type img {
+    height: 80%;
+    opacity: 0.6;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+    transition: 1.5s ease; }
+.mission-view .mission-type:hover {
+  background-color: #222; }
+  .mission-view .mission-type:hover img {
+    opacity: 1.0;
+    transform: scale(1.2); }
+  .mission-view .mission-type:hover h2 {
+    color: white;
+    transform: scale(1.1); }
+  .mission-view .mission-type:hover .separator {
+    background-color: white; }
 .mission-view a {
   height: 33.34%;
   text-decoration: none; }

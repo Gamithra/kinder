@@ -243,7 +243,14 @@ nav {
 
 
   #default {
-    padding: 16px;
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(181,160,219,0.40798326166404064) 96%);
+
+ background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(164,138,209,0.40798326166404064) 96%);
+ background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(164,138,209,0.40798326166404064) 100%);
+ padding: 16px;
   }
 
   .view-mission {
@@ -507,14 +514,24 @@ nav {
 
 .milestone {
   background-color: #6936eb;
-  width: 100%;
+  width: auto;
   min-height: 80px;
   padding: 8px 8px 5px;
+  text-align: center;
+  border-radius: 8px;
+  margin: -5px 10px 7px;
+  box-sizing: border-box;
+  background: rgb(2,0,36);
+ background: rgb(156,167,254);
+background: linear-gradient(180deg, rgba(156,167,254,1) 75%, rgba(111,90,208,0.40798326166404064) 100%);
 
+
+ background: rgb(156,167,254);
+background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.40798326166404064) 100%); 
   h3 {
     color: white;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
   }
   p {
     color: white;
@@ -529,7 +546,7 @@ nav {
     color: white;
 
       #rank-do {
-        width: 140px;
+        width: 130px;
         background-color: #888;
         height: 8px;
         border-radius: 3px;
@@ -541,8 +558,8 @@ nav {
         margin-right: 12px;
         margin-top: 8px;
         border-radius: 3px;
-        width: 120px;
-        background-color: #5B5;
+        width: 100px;
+        background-color: #cbffee;
         height: 8px;
         top: 0;
       }
@@ -725,11 +742,52 @@ nav {
 .mission-view {
   .mission-type {
     height: 100%;
-    padding: 20px;
+    padding: 30px;
+    position: relative;
+    transition: 0.3s ease;
+
+    .separator {
+      width: 20px;
+      height: 2px;
+      opacity: 0.3;
+      background-color: #333;
+      margin-top: 6px;
+    }
 
     h2 {
       color: white;
       font-size: 18px;
+      margin-top: 18px;
+      z-index: 10;
+      width: 50%;
+      margin-left: auto;
+      opacity: 0.99;
+      transition: 0.3s ease;
+    }
+
+
+    img {
+      height: 80%;
+      opacity: 0.6;
+      z-index: 2;
+      position: absolute;
+      bottom: 10px;
+      transition: 1.5s ease;
+    }
+  }
+
+  .mission-type:hover {
+    background-color: #222;
+    img {
+      opacity: 1.0;
+      transform: scale(1.2);
+    }
+    h2 {
+      color: white;
+      transform: scale(1.1);
+    }
+    .separator {
+      background-color: white;
     }
   }
 
@@ -918,7 +976,7 @@ nav {
   justify-content: space-around;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Lato");
 html,
 body {
   width: 100%;
