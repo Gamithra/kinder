@@ -142,7 +142,77 @@
 		</div>
 	</div>
 </div>
-<div class="view map-view" style="display:flex">
+
+<div class="view volunteer-view" style="display:flex">
+  <h2>Volunteering tasks</h2>
+  <div class="volunteering-task">
+  	<div class="volunteering-image">
+      <img src="img/elderly.jpeg"></img>
+  	</div>
+  	<div class="volunteering-text">
+      <div class="volunteering-coins">
+        <img src="img/coins.png"></img>
+        200
+      </div>
+      <h6>300m</h6>
+      <h2>Deliver groceries to elderly lady</h2>
+  	</div>
+  </div>
+  <div class="volunteering-task">
+  	<div class="volunteering-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_x_CeDXavwahWkSYFadTh2H3oypOQuJMzA5qx4HiEJh6oJW-Z&usqp=CAU"></img>
+  	</div>
+  	<div class="volunteering-text">
+      <div class="volunteering-coins">
+        <img src="img/coins.png"></img>
+        130
+      </div>
+      <h6>1450m</h6>
+      <h2>Take Breki for a walk</h2>
+  	</div>
+  </div>
+  <div class="volunteering-task">
+  	<div class="volunteering-image">
+      <img src="https://www.ovlg.com/sites/files/uploaded_files/how-an-elderly-person-can-stop-harassing-collection-calls.jpg"></img>
+  	</div>
+  	<div class="volunteering-text">
+      <div class="volunteering-coins">
+        <img src="img/coins.png"></img>
+        260
+      </div>
+      <h6>2.6km</h6>
+      <h2>Have a chat with Arnfríður to keep her company</h2>
+  	</div>
+  </div>
+  <div class="volunteering-task">
+  	<div class="volunteering-image">
+      <img src="https://frettabladid.overcastcdn.com/images/354726.width-1220.png"></img>
+  	</div>
+  	<div class="volunteering-text">
+      <div class="volunteering-coins">
+        <img src="img/coins.png"></img>
+        890
+      </div>
+      <h6>560km</h6>
+      <h2>Participate in Hack the Crisis Iceland</h2>
+  	</div>
+  </div>
+  <div class="volunteering-task">
+  	<div class="volunteering-image">
+      <img src="img/gamithra.jpg"></img>
+  	</div>
+  	<div class="volunteering-text">
+      <div class="volunteering-coins">
+        <img src="img/coins.png"></img>
+        6
+      </div>
+      <h6>3200km</h6>
+      <h2>Bring snacks to Gamithra in quarantine</h2>
+  	</div>
+  </div>
+</div>
+
+<div class="view map-view" style="display:none">
   <img src="img/isf.png" class="map"></img>
   <img src="img/point.png" class="map-point" id="point-1"></img>
   <img src="img/point.png" class="map-point" id="point-2"></img>
@@ -152,10 +222,22 @@
   <div class="view-mission" id="default">
     Select a mission near you!
 
-    <span>There are currently 3 missions in your area. How could you help out today?</span>
+    <span>There are currently 3 missions in your area.</span>
+
+    <div class="mission-tags">
+      <div class="mission-tag mission-tag-rel">volunteering</div>
+      <div class="mission-tag mission-tag-rel">goods & items</div>
+      <div class="mission-tag mission-tag-rel">projects</div>
+    </div>
   </div>
   <div class="view-mission" id="mission-1" style="display: none">
-    <img src="img/elderly.jpeg"></img>
+    <img class="mission-image" src="img/elderly.jpeg"></img>
+    <div class="mission-tag">
+      volunteering
+    </div>
+    <div class="mission-back" id="mission-back1">
+      back
+    </div>
     <h3>Deliver groceries to elderly lady</h3>
     <p>
       Anna needs some help getting groceries and some supplies from the pharmacy. Could you help out between 16:00-17:00 on Friday?
@@ -164,6 +246,64 @@
       <div class="mission-reward">
         Reward
         200
+        <img src="img/coins.png"></img>
+      </div>
+      <div class="mission-buttons">
+        <div class="mission-share">Share
+          <div>
++10<img src="img/coins.png"></img></div>
+        </div>
+        <div class="mission-yes">
+            I will help!
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="view-mission" id="mission-2" style="display: none">
+    <img class="mission-image" src="https://5.imimg.com/data5/LH/QS/MY-30863900/dell-used-leptop-500x500.jpeg"></img>
+    <div class="mission-tag">
+      goods & items
+    </div>
+    <div class="mission-back" id="mission-back2">
+      back
+    </div>
+    <h3>Need a laptop for remote studies</h3>
+    <p>
+      Hi! We're a family of 4 from Poland and we've just moved here. Our family laptop broke down and we desperately need one so our 8-year old daughter could continue studies.
+    </p>
+    <div class="mission-take">
+      <div class="mission-reward">
+        Reward
+        280
+        <img src="img/coins.png"></img>
+      </div>
+      <div class="mission-buttons">
+        <div class="mission-share">Share
+          <div>
++10<img src="img/coins.png"></img></div>
+        </div>
+        <div class="mission-yes">
+            I will help!
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="view-mission" id="mission-3" style="display: none">
+    <img class="mission-image" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-03-10-use-a-drill-final-clean-00-01-57-10-still053-1584632505.jpg"></img>
+    <div class="mission-tag">
+      goods & items
+    </div>
+    <div class="mission-back" id="mission-back3">
+      back
+    </div>
+    <h3>Borrow a drill</h3>
+    <p>
+      Blessuð og sæl, I need to borrow a drill ASAP to put some paintings up.
+    </p>
+    <div class="mission-take">
+      <div class="mission-reward">
+        Reward
+        160
         <img src="img/coins.png"></img>
       </div>
       <div class="mission-buttons">
@@ -345,6 +485,7 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "none"});
+        $(".volunteer-view").css({display: "none"});
         $("#close").prop("checked", false);
       });
       $("#projects").on('click', function() {
@@ -352,6 +493,7 @@
         $(".map-view").css({display: "none"});
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "none"});
+        $(".volunteer-view").css({display: "none"});
         $(".mission-view").css({display: "none"});
         $("#close").prop("checked", false);
       });
@@ -361,6 +503,7 @@
         $(".profile-view").css({display: "flex"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "none"});
+        $(".volunteer-view").css({display: "none"});
         $("#close").prop("checked", false);
       });
       $("#leaderboard").on('click', function() {
@@ -369,6 +512,7 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "flex"});
         $(".mission-view").css({display: "none"});
+        $(".volunteer-view").css({display: "none"});
         $("#close").prop("checked", false);
       });
       $("#missions").on('click', function() {
@@ -377,9 +521,19 @@
         $(".profile-view").css({display: "none"});
         $(".leader-view").css({display: "none"});
         $(".mission-view").css({display: "flex"});
+        $(".volunteer-view").css({display: "none"});
         $("#close").prop("checked", false);
       });
 
+      $("#volunteer").on('click', function() {
+        $(".preview-block").css({display: "none"});
+        $(".map-view").css({display: "none"});
+        $(".profile-view").css({display: "none"});
+        $(".leader-view").css({display: "none"});
+        $(".mission-view").css({display: "none"});
+        $(".volunteer-view").css({display: "flex"});
+        $("#close").prop("checked", false);
+      });
 
       $("#point-1").on('click', function() {
         $("#mission-1").css({display: "flex"});
@@ -391,8 +545,65 @@
         }, 500, function() {
           // Animation complete.
         });
-
       });
+
+      $("#point-2").on('click', function() {
+        $("#mission-2").css({display: "flex"});
+        $("#default").css({display: "none"});
+
+        $( "#mission-2" ).animate({
+          opacity: 1.0,
+          height: "450px",
+        }, 500, function() {
+          // Animation complete.
+        });
+      });
+
+      $("#point-3").on('click', function() {
+        $("#mission-3").css({display: "flex"});
+        $("#default").css({display: "none"});
+
+        $( "#mission-3" ).animate({
+          opacity: 1.0,
+          height: "450px",
+        }, 500, function() {
+          // Animation complete.
+        });
+      });
+
+      $("#mission-back1").on('click', function() {
+        $( "#mission-1" ).animate({
+          opacity: 0.0,
+          height: "200px",
+        }, 500, function() {
+          $("#mission-1").css({display: "none"});
+          $("#default").css({display: "flex"});
+          // Animation complete.
+        });
+      });
+      $("#mission-back2").on('click', function() {
+        $( "#mission-2" ).animate({
+          opacity: 0.0,
+          height: "200px",
+        }, 500, function() {
+          $("#mission-2").css({display: "none"});
+          $("#default").css({display: "flex"});
+          // Animation complete.
+        });
+      });
+
+      $("#mission-back3").on('click', function() {
+        $( "#mission-3" ).animate({
+          opacity: 0.0,
+          height: "200px",
+        }, 500, function() {
+          $("#mission-3").css({display: "none"});
+          $("#default").css({display: "flex"});
+          // Animation complete.
+        });
+      });
+
+
     });
 var cards = [
 	{

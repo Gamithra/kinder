@@ -80,6 +80,117 @@ nav {
   flex-direction: column;
   overflow-y: scroll;
 }
+
+.volunteer-view {
+    overflow-y: scroll;
+    display: flex;
+    height: 80%;
+
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .volunteering-task {
+      display: flex;
+      flex-direction: column;
+      border-radius: 6px;
+      margin: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      position: relative;
+      box-shadow: 1px 3px 15px #ccc;
+
+      .volunteering-coins {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #6936eb;
+        padding: 3px 6px;
+        color: white;
+        font-size: 10px;
+
+        img {
+          width: 15px;
+          height: 15px;
+          margin-right: 3px;
+        }
+      }
+
+      .volunteering-image {
+        img {
+          max-height: 100px;
+          border-radius: 6px 6px 0 0;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h2 {
+        background-color: white;
+        font-size: 12px;
+        color: black;
+        font-weight: 300;
+        padding: 0px 10px 6px 10px;
+        border-radius: 0 0 6px 6px;
+        text-align: left;
+        margin: 0;
+      }
+
+      h6 {
+        font-size: 9px;
+        color: #ccc;
+        margin: 2px 0;
+        padding-left: 10px;
+      }
+
+    }
+
+    h2 {
+      padding: 12px 0 0 0;
+      font-size: 18px;
+      background-color: white;
+      color: #333;
+      text-align: center;
+      margin: 0;
+    }
+
+    .volunteer-block {
+      width: 90%;
+      box-sizing: border-box;
+
+      img {
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .preview-block__content {
+          top: 0;
+      }
+
+      .image-block {
+        height: 100px;
+      }
+
+      .image-block__image {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+      }
+
+      h2 {
+        background-color: white;
+        color: black;
+        padding: 0px;
+      }
+    }
+}
+
+
 .map-view {
   overflow: hidden;
 
@@ -147,6 +258,11 @@ nav {
     align-items: center;
     justify-content: flex-start;
     overflow-y: scroll;
+
+    .mission-image {
+      height: 160px;
+      object-fit: cover;
+    }
 
     img {
       width: 100%;
@@ -223,7 +339,7 @@ nav {
       font-size: 9px;
       margin: 0 10px;
       border-radius: 20px;
-      background-color: #6936eb;
+        background-color: #6936eb;
       color: white;
       div {
         display: flex;
@@ -244,7 +360,7 @@ nav {
         width: 15px;
         margin: 0 2px;
       }
-      margin-top: 18px;
+      margin-top: 6px;
       font-size: 14px;
       display: flex;
       flex-direction: row;
@@ -254,6 +370,44 @@ nav {
       width: 100%;
       align-items: center;
       justify-content: flex-end;
+    }
+
+    .mission-tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      color: white;
+      border-radius: 6px;
+      background-color: #6936eb;
+      font-size: 10px;
+      padding: 4px;
+    }
+
+    .mission-back {
+      position: absolute;
+      top: 8px;
+      font-size: 10px;
+      right: 8px;
+      color: white;
+      padding: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .mission-tag-rel {
+      position: relative;
+      margin-right: 5px;
+      top: 0 !important;
+      left: 0 !important;
+    }
+
+    .mission-tags {
+      display: flex;
+      flex-direction: row;
+      padding-top: 14px;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 }
