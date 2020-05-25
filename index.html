@@ -536,6 +536,16 @@
         $(".volunteer-view").css({display: "flex"});
         $("#close").prop("checked", false);
       });
+      $("#items").on('click', function() {
+        $(".preview-block").css({display: "none"});
+        $(".map-view").css({display: "none"});
+        $(".profile-view").css({display: "none"});
+        $(".leader-view").css({display: "none"});
+        $(".mission-view").css({display: "none"});
+        $(".volunteer-view").css({display: "flex"});
+        $("#close").prop("checked", false);
+      });
+
 
       $("#point-1").on('click', function() {
         $("#mission-1").css({display: "flex"});
