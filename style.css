@@ -333,20 +333,20 @@ nav {
       justify-content: flex-start; }
 
 .links {
-  padding: 11px 12px; }
+  padding: 11px 21px; }
 
 .menu-rank {
   position: relative; }
   .menu-rank #rank-do {
     width: 110px;
-    background-color: #888;
+    background-color: #555;
     height: 8px;
     border-radius: 3px; }
   .menu-rank #rank-done {
     position: absolute;
     border-radius: 3px;
     width: 80px;
-    background-color: #7F9;
+    background-color: #cbffee;
     height: 8px;
     top: 0; }
   .menu-rank p {
@@ -356,7 +356,8 @@ nav {
 
 .menu-you {
   display: flex;
-  background-color: #333;
+  background-color: #222;
+  border-radius: 0 0 10px 10px;
   width: 100%;
   min-height: 100px;
   padding: 20px 20px 10px 12px;
@@ -434,10 +435,12 @@ nav {
       height: 8px;
       border-radius: 3px;
       margin-top: 8px;
-      margin-right: 12px; }
+      margin-right: 12px;
+      margin-left: 3px; }
     .milestone .milestone-progress #rank-done {
       position: absolute;
       margin-right: 12px;
+      margin-left: 3px;
       margin-top: 8px;
       border-radius: 3px;
       width: 100px;
@@ -447,7 +450,7 @@ nav {
 
 .menu-bottom {
   width: 100%;
-  padding: 12px;
+  padding: 12px 21px;
   background-color: #222;
   color: white;
   height: 130px; }
@@ -460,14 +463,14 @@ nav {
   padding: 0; }
   .profile-view .profile-image img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #d4d4b4; }
+    height: auto; }
   .profile-view .profile-name {
     display: flex;
     padding: 16px;
     background-color: #333;
     min-height: 150px;
     height: auto;
+    font-size: 20px;
     margin-top: -6px;
     color: white; }
     .profile-view .profile-name .menu-name {
@@ -486,9 +489,14 @@ nav {
         margin: 2px;
         font-size: 13px; }
     .profile-view .profile-name .menu-level {
-      margin-top: 6px; }
+      margin-top: 6px;
+      font-size: 14px; }
     .profile-view .profile-name .menu-rank {
       margin-top: 6px; }
+      .profile-view .profile-name .menu-rank #rank-do {
+        width: 215px; }
+      .profile-view .profile-name .menu-rank #rank-done {
+        width: 150px; }
   .profile-view .profile-contributions {
     padding: 16px;
     background-color: #222;
@@ -562,52 +570,57 @@ nav {
         width: 15px;
         height: 15px; }
 
-.mission-view .mission-type {
-  height: 100%;
-  padding: 30px;
-  position: relative;
-  transition: 0.3s ease; }
-  .mission-view .mission-type .separator {
-    width: 20px;
-    height: 2px;
-    opacity: 0.3;
-    background-color: #333;
-    margin-top: 6px; }
-  .mission-view .mission-type h2 {
-    color: white;
-    font-size: 18px;
-    margin-top: 18px;
-    z-index: 10;
-    width: 50%;
-    margin-left: auto;
-    opacity: 0.99;
-    transition: 0.3s ease; }
-  .mission-view .mission-type img {
-    height: 80%;
-    opacity: 0.6;
-    z-index: 2;
-    position: absolute;
-    bottom: 10px;
-    transition: 1.5s ease; }
-.mission-view .mission-type:hover {
-  background-color: #222; }
-  .mission-view .mission-type:hover img {
-    opacity: 1.0;
-    transform: scale(1.2); }
-  .mission-view .mission-type:hover h2 {
-    color: white;
-    transform: scale(1.1); }
-  .mission-view .mission-type:hover .separator {
-    background-color: white; }
-.mission-view a {
-  height: 33.34%;
-  text-decoration: none; }
-.mission-view .mission-type1 {
-  background-color: #a8e0ce; }
-.mission-view .mission-type2 {
-  background-color: #9ca7fe; }
-.mission-view .mission-type3 {
-  background-color: #6936eb; }
+.mission-view {
+  height: 79%;
+  margin-bottom: 40px; }
+  .mission-view .mission-type {
+    height: 95%;
+    padding: 30px;
+    position: relative;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    margin: 10px; }
+    .mission-view .mission-type .separator {
+      width: 20px;
+      height: 2px;
+      opacity: 0.3;
+      background-color: #333;
+      margin-top: 6px; }
+    .mission-view .mission-type h2 {
+      color: white;
+      font-size: 18px;
+      margin-top: 18px;
+      z-index: 10;
+      width: 50%;
+      margin-left: auto;
+      opacity: 0.99;
+      transition: 0.3s ease; }
+    .mission-view .mission-type img {
+      height: 80%;
+      opacity: 0.6;
+      z-index: 2;
+      position: absolute;
+      bottom: 10px;
+      transition: 1.5s ease; }
+  .mission-view .mission-type:hover {
+    background-color: #222; }
+    .mission-view .mission-type:hover img {
+      opacity: 1.0;
+      transform: scale(1.2); }
+    .mission-view .mission-type:hover h2 {
+      color: white;
+      transform: scale(1.1); }
+    .mission-view .mission-type:hover .separator {
+      background-color: white; }
+  .mission-view a {
+    height: 33.34%;
+    text-decoration: none; }
+  .mission-view .mission-type1 {
+    background-color: #a8e0ce; }
+  .mission-view .mission-type2 {
+    background-color: #9ca7fe; }
+  .mission-view .mission-type3 {
+    background-color: #6936eb; }
 
 .secret-background {
   position: absolute;

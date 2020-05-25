@@ -420,14 +420,14 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(164,138,209,0.
 }
 
 .links {
-  padding: 11px 12px;
+  padding: 11px 21px;
 }
 
 .menu-rank {
   position: relative;
   #rank-do {
     width: 110px;
-    background-color: #888;
+    background-color: #555;
     height: 8px;
     border-radius: 3px;
   }
@@ -435,7 +435,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(164,138,209,0.
     position: absolute;
     border-radius: 3px;
     width: 80px;
-    background-color: #7F9;
+    background-color: #cbffee;
     height: 8px;
     top: 0;
   }
@@ -448,7 +448,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(164,138,209,0.
 
 .menu-you {
   display: flex;
-  background-color: #333;
+  background-color: #222;
+  border-radius:  0 0 10px 10px;
   width: 100%;
   min-height: 100px;
   padding: 20px 20px 10px 12px;
@@ -504,7 +505,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 51%, rgba(164,138,209,0.
      display: flex;
      flex-direction: column;
    }
-
    .menu-level {
      margin: 0;
      color: #f7f7e8;
@@ -527,7 +527,7 @@ background: linear-gradient(180deg, rgba(156,167,254,1) 75%, rgba(111,90,208,0.4
 
 
  background: rgb(156,167,254);
-background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.40798326166404064) 100%); 
+background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.40798326166404064) 100%);
   h3 {
     color: white;
     margin: 0;
@@ -552,10 +552,12 @@ background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.4
         border-radius: 3px;
         margin-top: 8px;
         margin-right: 12px;
+        margin-left: 3px;
       }
       #rank-done {
         position: absolute;
         margin-right: 12px;
+        margin-left: 3px;
         margin-top: 8px;
         border-radius: 3px;
         width: 100px;
@@ -568,7 +570,7 @@ background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.4
 
 .menu-bottom {
   width: 100%;
-  padding: 12px;
+  padding: 12px 21px;
   background-color: #222;
   color: white;
   height: 130px;
@@ -588,7 +590,6 @@ background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.4
   .profile-image img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #d4d4b4;
   }
 
   .profile-name {
@@ -597,6 +598,7 @@ background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.4
     background-color: #333;
     min-height: 150px;
     height: auto;
+    font-size: 20px;
     margin-top: -6px;
     color: white;
 
@@ -625,9 +627,16 @@ background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.4
 
     .menu-level {
       margin-top: 6px;
+      font-size: 14px;
     }
     .menu-rank {
       margin-top: 6px;
+      #rank-do {
+        width: 215px;
+      }
+      #rank-done {
+        width: 150px;
+      }
     }
 
 
@@ -740,11 +749,15 @@ background: linear-gradient(300deg, rgba(156,167,254,1) 61%, rgba(111,90,208,0.4
 }
 
 .mission-view {
+  height:79%;
+  margin-bottom: 40px;
   .mission-type {
-    height: 100%;
+    height: 95%;
     padding: 30px;
     position: relative;
     transition: 0.3s ease;
+    border-radius: 10px;
+    margin: 10px;
 
     .separator {
       width: 20px;
